@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import HomeNav from "../components/HomeNav";
 function AboutPage() {
   return (
-    <div className="bg-violet-200">
+    <div className="bg-violet-200 h-screen max-sm:h-full">
       <HomeNav />
       <div className="flex items-center justify-evenly gap-4 h-screen p-8 max-md:flex-wrap max-md:h-full max-md:pt-10">
         <div className="w-3/4 max-md:w-full">

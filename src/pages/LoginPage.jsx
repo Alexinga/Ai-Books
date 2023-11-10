@@ -25,7 +25,7 @@ function LoginPage() {
     [isAuthenticated, navigate]
   );
   return (
-    <div>
+    <div className="h-screen">
       <HomeNav />
       <div className="flex justify-center items-center h-screen bg-violet-200 max-sm:h-full max-sm:p-4 max-sm:pt-10">
         <div className="bg-white p-8 rounded-lg">
