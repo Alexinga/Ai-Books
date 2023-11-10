@@ -27,22 +27,22 @@ function BookItemModal({ showJournalTest, closeModal }) {
       date,
       notes,
     };
-    console.log(journalNotes.key);
+    // console.log(journalNotes.key);
     await addToJournal(journalNotes);
     navigate("/app/journal");
   }
   return (
     <>
       {showJournalTest && (
-        <div className="fixed top-0 left-0 bg-black z-10 opacity-1 w-full h-full flex justify-center items-center flex-col">
+        <div className="fixed top-0 left-0 bg-slate-100 z-10 opacity-95 w-full h-full flex justify-center items-center flex-col">
           <div className="flex items-center gap-4 mb-4">
-            <span onClick={closeModal} className="mb-20 cursor-pointer">
+            <span onClick={closeModal} className="pb-20 cursor-pointer">
               ❌
             </span>
             {currentBook.covers ? (
               <div>
                 <img
-                  className="w-16"
+                  className="w-16 max-sm:w-24"
                   //eslint-disable-next-line
                   src={`${IMG_PATH}${currentBook.covers.at(0)}-L.jpg`}
                   //eslint-disable-next-line
@@ -57,7 +57,9 @@ function BookItemModal({ showJournalTest, closeModal }) {
               ></img>
             )}
             <div>
-              <h2 className="text-white">{currentBook.title}</h2>
+              <h2 className="text-violet-500 text-lg font-bold max-sm:text-sm">
+                {currentBook.title}
+              </h2>
               <Rating
                 fillColor="#8b5cf6"
                 ratingValue={rating}
@@ -73,7 +75,7 @@ function BookItemModal({ showJournalTest, closeModal }) {
           </div>
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <textarea
-              className="border-4 border-violet-500"
+              className="border-4 border-violet-500 max-sm:w-3/4 max-sm:m-auto"
               name="message"
               id="message"
               cols="40"
@@ -82,7 +84,7 @@ function BookItemModal({ showJournalTest, closeModal }) {
               onChange={(e) => setNotes(e.target.value)}
               value={notes}
             ></textarea>
-            <button className="bg-violet-500 text-white p-1 rounded-lg">
+            <button className="bg-violet-500 text-white p-1 rounded-lg max-sm:w-3/4 max-sm:m-auto">
               Submit
             </button>
           </form>
