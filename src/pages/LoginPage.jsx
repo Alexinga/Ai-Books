@@ -3,8 +3,8 @@ import HomeNav from "../components/HomeNav";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 function LoginPage() {
-  const [email, setEmail] = useState("soundthoughts@gmail.com");
-  const [password, setPassword] = useState("ilovebooks");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
   function handleSubmit(e) {

@@ -42,7 +42,7 @@ function JournalItem({ journalItem }) {
   return (
     <li className="border-b-2 border-purple-500">
       <h2>{`${monthName} ${day}, ${year}`}</h2>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center max-sm:items-start">
         <div className="flex gap-2 items-start">
           {/*eslint-disable-next-line*/}
           <img className="w-20" src={`${IMG_PATH}${imgCover}-L.jpg`}></img>
@@ -58,7 +58,7 @@ function JournalItem({ journalItem }) {
             {showNote && <p>{journalItem.notes}</p>}
           </div>
         </div>
-        <div>
+        <div className="max-sm:flex">
           <span onClick={handleNote} className="cursor-pointer">
             📝
           </span>
