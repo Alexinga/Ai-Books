@@ -21,7 +21,7 @@ function CollectionItem({ singleBookCollection }) {
       {/* eslint-disable-next-line */}
       {singleBookCollection.covers ? (
         <img
-          className="w-screen object-cover max-md:h-full"
+          className="w-full object-cover max-md:h-full"
           //eslint-disable-next-line
           src={`${IMG_PATH}${singleBookCollection.covers.at(0)}-L.jpg`}
           //eslint-disable-next-line

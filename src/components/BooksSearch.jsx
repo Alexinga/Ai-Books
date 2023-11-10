@@ -11,12 +11,12 @@ function BooksSearch() {
     }
   }
   return (
-    <div className="flex items-center justify-between p-4 max-md:flex-wrap max-md:justify-center bg-violet-200">
-      <h2 className="text-xl">
+    <div className="flex items-center justify-between p-4 max-md:flex-wrap max-md:justify-center max-md:pt-10 bg-violet-200">
+      <h2 className="text-xl max-md:text-center max-md:text-lg">
         Welcome! Start searching for your favorite books!
       </h2>
-      <div className="flex items-center gap-4">
-        <span className="bg-violet-500 text-white p-1 rounded-lg">
+      <div className="flex items-center gap-4 max-sm:flex-wrap">
+        <span className="bg-violet-500 text-white p-1 rounded-lg text-sm max-sm:w-full max-sm:text-center">
           Results: {resultsNum}
         </span>
         <input

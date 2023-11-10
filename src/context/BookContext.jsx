@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useContext, useReducer } from "react";
 const BASE_API = "https://openlibrary.org/search.json?title=";
 // const CURRENTBOOK_API = "https://openlibrary.org/works/OL45804W.json";
@@ -8,8 +9,8 @@ const initialState = {
   isLoading: false,
   errorMsg: "",
   id: null,
-  collection: [],
-  journal: [],
+  collection: JSON.parse(localStorage.getItem("collection")) || [],
+  journal: JSON.parse(localStorage.getItem("journal")) || [],
 };
 function reducer(state, action) {
   switch (action.type) {
@@ -37,6 +38,8 @@ function reducer(state, action) {
         isLoading: false,
         collection: [...state.collection, state.currentBook],
       };
+    case "collection/storage/loaded":
+      return { ...state, isLoading: false, collection: action.payload };
     case "collection/deleted":
       return {
         ...state,
@@ -72,7 +75,14 @@ function BookProvider({ children }) {
     { books, isLoading, errorMsg, id, currentBook, collection, journal },
     dispatch,
   ] = useReducer(reducer, initialState);
+  //This will help with race condition where the api will stop making calls towards the end
   const controller = new AbortController();
+  useEffect(() => {
+    localStorage.setItem("collection", JSON.stringify(collection));
+  }, [collection]);
+  useEffect(() => {
+    localStorage.setItem("journal", JSON.stringify(journal));
+  }, [journal]);
   async function getAPI(searchTitle) {
     const abortAPI = () => {
       controller.abort();

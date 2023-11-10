@@ -27,10 +27,10 @@ function LoginPage() {
   return (
     <div>
       <HomeNav />
-      <div className="flex justify-center items-center h-screen bg-violet-200 gap-4 flex-col">
+      <div className="flex justify-center items-center h-screen bg-violet-200 max-sm:h-full max-sm:p-4 max-sm:pt-10">
         <div className="bg-white p-8 rounded-lg">
           <div className="text-center ">
-            <h2 className="text-4xl">LOGIN</h2>
+            <h2 className="text-4xl max-md:text-xl">LOGIN</h2>
             <p className="text-sm">
               Get things started with an account for Sound Thoughts Blog
             </p>

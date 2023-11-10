@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import HomeNav from "../components/HomeNav";
 function AboutPage() {
   return (
-    <div>
+    <div className="bg-violet-200">
       <HomeNav />
-      <div className="flex items-center justify-evenly bg-violet-200 gap-4 h-screen p-8 max-md:flex-wrap">
-        <div className="w-1/2 max-md:w-full">
-          <h2 className="text-4xl pb-4 max-md:text-xl">
+      <div className="flex items-center justify-evenly gap-4 h-screen p-8 max-md:flex-wrap max-md:h-full max-md:pt-10">
+        <div className="w-3/4 max-md:w-full">
+          <h2 className="text-4xl max-xl:text-2xl max-lg:text-xl max-md:text-lg">
             How We Started Sound Thoughts
           </h2>
-          <p className="text-sm">
+          {/* <p className="text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
             quae magni! Debitis, itaque? Laborum itaque fuga aliquid, non
             facere, nesciunt iste vel suscipit voluptates, perspiciatis commodi
@@ -20,11 +20,15 @@ function AboutPage() {
             obcaecati totam! Tempore repellendus molestias dolore, perferendis
             ut earum doloribus aspernatur voluptatibus quasi quia tempora, aut
             iure!
-          </p>
+          </p> */}
           <p className="text-sm py-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Consequuntur eaque autem quod cupiditate error, aliquam iure
-            pariatur iusto nostrum? Similique.
+            pariatur iusto nostrum? Similique. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Doloribus, quae magni! Debitis,
+            itaque? Laborum itaque fuga aliquid, non facere, nesciunt iste vel
+            suscipit voluptates, perspiciatis commodi labore laudantium.
+            Repellat qui non animi vero voluptatibus.
           </p>
           <Link to="/login">
             <button className="bg-violet-500 text-white px-4 py-2 border-2 rounded-lg">
@@ -34,7 +38,7 @@ function AboutPage() {
         </div>
         <div>
           <img
-            className="w-full max-md:w-3/5"
+            className="w-full max-md:w-full"
             src="/images/about.jpg"
             alt="about-img"
           ></img>

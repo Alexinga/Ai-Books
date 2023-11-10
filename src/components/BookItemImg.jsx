@@ -9,7 +9,7 @@ function BookItemImg() {
       {currentBook.covers ? (
         <div>
           <img
-            className="w-full max-md:h-full max-md:w-screen"
+            className="w-full max-md:w-full"
             //eslint-disable-next-line
             src={`${IMG_PATH}${currentBook.covers.at(0)}-L.jpg`}
             //eslint-disable-next-line
@@ -18,7 +18,7 @@ function BookItemImg() {
         </div>
       ) : (
         <img
-          className="w-1/2 max-md:w-full"
+          className="w-1/2 max-md:w-full hidden"
           src={`${placeholder}`}
           alt={`placeholder`}
         ></img>

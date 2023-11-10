@@ -1,5 +1,6 @@
 import { Rating } from "react-simple-star-rating";
 import { useBooks } from "../context/BookContext";
+import { useState } from "react";
 //eslint-disable-next-line
 function JournalItem({ journalItem }) {
   const { deleteJournalItem } = useBooks();
@@ -25,6 +26,10 @@ function JournalItem({ journalItem }) {
   const day = dateObject.getDate();
   const year = dateObject.getFullYear();
   const IMG_PATH = "https://covers.openlibrary.org/b/id/";
+  const [showNote, setShowNote] = useState(false);
+  function handleNote() {
+    setShowNote(!showNote);
+  }
   function handleRemoveJournal() {
     //eslint-disable-next-line
     deleteJournalItem(journalItem.key);
@@ -50,10 +55,13 @@ function JournalItem({ journalItem }) {
               initialValue={ratingNum}
             ></Rating>
             {/*eslint-disable-next-line */}
-            <p>{journalItem.notes}</p>
+            {showNote && <p>{journalItem.notes}</p>}
           </div>
         </div>
         <div>
+          <span onClick={handleNote} className="cursor-pointer">
+            📝
+          </span>
           <span onClick={handleRemoveJournal} className="cursor-pointer">
             ❌
           </span>

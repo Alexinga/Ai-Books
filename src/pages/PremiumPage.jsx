@@ -4,9 +4,9 @@ function PremiumPage() {
   return (
     <div>
       <HomeNav />
-      <div className="flex items-center justify-center max-md:justify-normal flex-col h-screen bg-violet-200">
+      <div className="flex items-center justify-center max-md:justify-normal flex-col h-screen bg-violet-200 max-md:h-full">
         <div>
-          <h2 className="text-4xl text-center max-md:text-xl pt-8">
+          <h2 className="text-4xl text-center max-md:text-xl pt-8 max-md:pt-10">
             Premium Plans
           </h2>
           <p className="text-sm text-center">

@@ -15,7 +15,7 @@ function UtilityBtn({ showModal }) {
   const journalDuplicate = journal.map((item) => item.key).includes(id);
   const collectionKey = collection.map((item) => item.key).at(0);
   const journalKey = journal.map((item) => item.key).at(0);
-  console.log(collectionKey);
+  // console.log(collectionKey);
   const navigate = useNavigate();
   function handleCollection() {
     addToCollection();

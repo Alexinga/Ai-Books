@@ -1,8 +1,6 @@
 import { useBooks } from "../context/BookContext";
-import Loading from "./Loading";
 function BookItemContent() {
-  const { currentBook, isLoading } = useBooks();
-  if (isLoading) return <Loading />;
+  const { currentBook } = useBooks();
   return (
     <>
       <h2>
