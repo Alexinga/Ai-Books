@@ -19,17 +19,19 @@ function BooksSearch() {
         <span className="bg-violet-500 text-white p-1 rounded-lg text-sm max-sm:w-1/2 max-sm:text-center max-sm:m-auto">
           Results: {resultsNum}
         </span>
-        <input
-          onChange={handleCall}
-          className="border-4 p-1 rounded-lg"
-          type="search"
-          placeholder="search..."
-        ></input>
-        <Link to={"book-list"}>
-          <button className="bg-violet-500 text-white p-1 rounded-lg">
-            Go
-          </button>
-        </Link>
+        <div className="max-sm:m-auto">
+          <input
+            onChange={handleCall}
+            className="border-4 p-1 rounded-lg"
+            type="search"
+            placeholder="search..."
+          ></input>
+          <Link to={"book-list"}>
+            <button className="bg-violet-500 text-white p-1 rounded-lg">
+              Go
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

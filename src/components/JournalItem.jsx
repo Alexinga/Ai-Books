@@ -50,12 +50,13 @@ function JournalItem({ journalItem }) {
             {/*eslint-disable-next-line*/}
             <h4>{journalItem.currentBook}</h4>
             <Rating
+              size="25px"
               fillColor="#8b5cf6"
               readonly={true}
               initialValue={ratingNum}
             ></Rating>
             {/*eslint-disable-next-line */}
-            {showNote && <p>{journalItem.notes}</p>}
+            {/* {showNote && <p>{journalItem.notes}</p>} */}
           </div>
         </div>
         <div className="max-sm:flex">
@@ -67,6 +68,8 @@ function JournalItem({ journalItem }) {
           </span>
         </div>
       </div>
+      {/*eslint-disable-next-line */}
+      {showNote && <p>{journalItem.notes}</p>}
     </li>
   );
 }
