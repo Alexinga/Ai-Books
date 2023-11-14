@@ -6,6 +6,15 @@ export default {
       backgroundImage: {
         "hero-img": "url('/images/hero.jpg')",
       },
+      keyframes: {
+        loading: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        loading: "spin 1s linear infinite",
+      },
     },
   },
   plugins: [],
